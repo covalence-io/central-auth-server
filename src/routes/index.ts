@@ -4,7 +4,7 @@ import authRouter from "./auth";
 
 const router = express.Router();
 
-router.use("/api", apiRouter);
+router.use("/api", (req, res) => res.status(404).json({ message: "No API routes are enabled yet" }));
 router.use("/auth", authRouter);
 
 export default router;

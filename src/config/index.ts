@@ -29,7 +29,7 @@ export const sql = {
         host: process.env.BAR_DB_HOST,
         database: process.env.BAR_DB_NAME
     }
-} as { [key: string]: DBConfig };
+} as { [key in db_keys]: DBConfig };
 
 if (!process.env.TOKEN_KEY) {
     console.log("Cannot start server without token signing key");
